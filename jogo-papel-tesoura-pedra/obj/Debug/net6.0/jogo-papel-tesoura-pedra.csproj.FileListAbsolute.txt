@@ -1,0 +1,15 @@
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/bin/Debug/net6.0/jogo-papel-tesoura-pedra
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/bin/Debug/net6.0/jogo-papel-tesoura-pedra.deps.json
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/bin/Debug/net6.0/jogo-papel-tesoura-pedra.runtimeconfig.json
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/bin/Debug/net6.0/jogo-papel-tesoura-pedra.dll
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/bin/Debug/net6.0/jogo-papel-tesoura-pedra.pdb
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.csproj.AssemblyReference.cache
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.AssemblyInfoInputs.cache
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.AssemblyInfo.cs
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.csproj.CoreCompileInputs.cache
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.dll
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/refint/jogo-papel-tesoura-pedra.dll
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.pdb
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/jogo-papel-tesoura-pedra.genruntimeconfig.cache
+/home/daniel/workspace-csharp/jogo-papel-tesoura-pedra/obj/Debug/net6.0/ref/jogo-papel-tesoura-pedra.dll
