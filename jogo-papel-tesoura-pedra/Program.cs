@@ -8,7 +8,6 @@ namespace jogoPapelTesouraPedra
     {
         static string MyMethod(int gameOption)
         {
-
             string objeto;
 
             if (gameOption == 1)
@@ -20,39 +19,34 @@ namespace jogoPapelTesouraPedra
                 objeto = "papel";
 
             }
-            else
-            {
-                //gameOption: 3
-                objeto = "tesoura";
-            }
+                else
+                {
+                    objeto = "tesoura";
+                }
 
             return objeto;
         }
 
         static void resultGame(int opcao1, int opcao2)
         {
-
             if (opcao1 == opcao2)
             {
                 Console.WriteLine("\n");
-                Console.WriteLine("As duas opções são iguais então empate");
-
+                Console.WriteLine("As duas opções são iguais, então empatou");
             }
             else if (opcao1 == 1)
             {
                 if (opcao2 == 3)
                 {
                     Console.WriteLine("\n");
-                    Console.WriteLine("Jogador 1 Ganhou!");
-                    Console.WriteLine("Pedra quebra tesoura do Jogador 2");
-
+                    Console.WriteLine("Jogador 1 ganhou!");
+                    Console.WriteLine("A Pedra quebra a tesoura do Jogador 2");
                 }
                 else
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("Jogador 2 ganhou");
-                    Console.WriteLine("Papel embrulha pedra");
-
+                    Console.WriteLine("O papel embrulha a pedra");
                 }
             }
             else if (opcao1 == 2)
@@ -60,21 +54,19 @@ namespace jogoPapelTesouraPedra
                 if (opcao2 == 1)
                 {
                     Console.WriteLine("\n");
-                    Console.WriteLine("Jogador 1 Ganhou!");
+                    Console.WriteLine("Jogador 1 ganhou!");
                     Console.WriteLine("O papel embrulha a pedra");
 
                 }
                 else
                 {
                     Console.WriteLine("\n");
-                    Console.WriteLine("Jogador 2 Ganhou");
-                    Console.WriteLine("Tesoura corta papel");
-
+                    Console.WriteLine("Jogador 2 ganhou");
+                    Console.WriteLine("A tesoura corta o papel");
                 }
 
             }
 
-            //
             else if (opcao1 == 3)
             {
                 if (opcao2 == 1)
@@ -88,13 +80,12 @@ namespace jogoPapelTesouraPedra
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("Jogador 1 Ganhou");
-                    Console.WriteLine("A Tesoura corta papel");
+                    Console.WriteLine("A tesoura corta o papel");
 
                 }
 
             }
-            //
-
+            
         }
 
         static void Main(string[] args)
@@ -105,14 +96,14 @@ namespace jogoPapelTesouraPedra
             string objeto2;
 
             Console.Clear();
-            Console.WriteLine("Jogo o começou");
+            Console.WriteLine("O jogo começou!");
 
-            Console.WriteLine("Escolha entre pedra (1), Papel (2) Tesoura (3)");
+            Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
             Console.Write("Jogador 1: ");
             opcao1 = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
-            Console.WriteLine("Escolha entre pedra (1), Papel (2) Tesoura (3)");
+            Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
             Console.Write("Jogador 2: ");
             opcao2 = Convert.ToInt32(Console.ReadLine());
 
@@ -126,9 +117,6 @@ namespace jogoPapelTesouraPedra
             {
                 Console.WriteLine("Jorgador 1: " + objeto1 + ", jogador 2: " + objeto2);
             }
-
-
-
 
         }
 
