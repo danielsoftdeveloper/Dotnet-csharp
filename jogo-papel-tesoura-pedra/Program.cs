@@ -14,24 +14,21 @@ namespace jogoPapelTesouraPedra
             {
                 case 1:
                     result = "Pedra";
-                    Console.ReadKey();
                     break;
 
                 case 2:
                     result = "Papel";
-                     Console.ReadKey();
                     break;
 
                 case 3:
                     result = "Tesoura";
-                     Console.ReadKey();
                     break;
 
                 default:
                     result = "Erro";
                     break;
             }
-            
+
             return result;
         }
 
@@ -42,7 +39,7 @@ namespace jogoPapelTesouraPedra
                 Console.WriteLine("\n");
                 Console.WriteLine("As duas opções são iguais, então empatou");
             }
-            
+
             else if (opcao1 == 1)
             {
                 if (opcao2 == 3)
@@ -104,14 +101,23 @@ namespace jogoPapelTesouraPedra
             Console.Clear();
             Console.WriteLine("O jogo começou!");
 
-            Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
-            Console.Write("Jogador 1: ");
-            opcao1 = Convert.ToInt32(Console.ReadLine());
-            Console.Clear();
+            do
+            {
+                Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
+                Console.Write("Jogador 1: ");
+                opcao1 = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
 
-            Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
-            Console.Write("Jogador 2: ");
-            opcao2 = Convert.ToInt32(Console.ReadLine());
+            } while (opcao1 < 1 || opcao1 > 3);
+
+            do
+            {
+                Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
+                Console.Write("Jogador 2: ");
+                opcao2 = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+
+            } while (opcao2 < 1 || opcao2 > 3);
 
             objeto1 = MyMethod(Convert.ToInt32(opcao1));
             objeto2 = MyMethod(Convert.ToInt32(opcao2));
