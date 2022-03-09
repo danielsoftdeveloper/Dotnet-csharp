@@ -8,23 +8,31 @@ namespace jogoPapelTesouraPedra
     {
         static string MyMethod(int gameOption)
         {
-            string objeto;
+            string result;
 
-            if (gameOption == 1)
+            switch (gameOption)
             {
-                objeto = "pedra";
-            }
-            else if (gameOption == 2)
-            {
-                objeto = "papel";
+                case 1:
+                    result = "Pedra";
+                    Console.ReadKey();
+                    break;
 
-            }
-                else
-                {
-                    objeto = "tesoura";
-                }
+                case 2:
+                    result = "Papel";
+                     Console.ReadKey();
+                    break;
 
-            return objeto;
+                case 3:
+                    result = "Tesoura";
+                     Console.ReadKey();
+                    break;
+
+                default:
+                    result = "Erro";
+                    break;
+            }
+            
+            return result;
         }
 
         static void resultGame(int opcao1, int opcao2)
@@ -34,6 +42,7 @@ namespace jogoPapelTesouraPedra
                 Console.WriteLine("\n");
                 Console.WriteLine("As duas opções são iguais, então empatou");
             }
+            
             else if (opcao1 == 1)
             {
                 if (opcao2 == 3)
@@ -56,7 +65,6 @@ namespace jogoPapelTesouraPedra
                     Console.WriteLine("\n");
                     Console.WriteLine("Jogador 1 ganhou!");
                     Console.WriteLine("O papel embrulha a pedra");
-
                 }
                 else
                 {
@@ -74,18 +82,16 @@ namespace jogoPapelTesouraPedra
                     Console.WriteLine("\n");
                     Console.WriteLine("Jogador 2 Ganhou!");
                     Console.WriteLine("A pedra quebra a tesoura");
-
                 }
                 else
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("Jogador 1 Ganhou");
                     Console.WriteLine("A tesoura corta o papel");
-
                 }
 
             }
-            
+
         }
 
         static void Main(string[] args)
