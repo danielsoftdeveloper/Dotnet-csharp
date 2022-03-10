@@ -88,7 +88,7 @@ namespace jogoPapelTesouraPedra
             int option2 = 0;
             string object1 = "Vazio";
             string object2 = "Vazio"; ;
-            bool cancelaJogo = false;
+            bool cancelaJogo = false;        
 
             Console.Clear();
             Console.WriteLine("O jogo começou!");
@@ -98,32 +98,35 @@ namespace jogoPapelTesouraPedra
                 Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
                 Console.Write("Jogador 1: ");
                 option1 = Convert.ToInt32(Console.ReadLine());
-                object1 = returnsObjectName(Convert.ToInt32(option1));                
+                object1 = returnsObjectName(Convert.ToInt32(option1));
                 Console.Clear();
             }
             catch (Exception e)
             {
                 Console.WriteLine("Erro Jogador 1");
                 cancelaJogo = true;
-                Console.WriteLine(e.Message);                
-            }
-
-            try
-            {
-                Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
-                Console.Write("Jogador 2: ");
-                option2 = Convert.ToInt32(Console.ReadLine());
-                object2 = returnsObjectName(Convert.ToInt32(option2));                
-                Console.Clear();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Erro Jogador 2");
-                cancelaJogo = true;
                 Console.WriteLine(e.Message);
             }
 
-            Console.Clear();
+            if (!cancelaJogo)
+            {
+                try
+                {
+                    Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura.");
+                    Console.Write("Jogador 2: ");
+                    option2 = Convert.ToInt32(Console.ReadLine());
+                    object2 = returnsObjectName(Convert.ToInt32(option2));
+                    Console.Clear();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Erro Jogador 2");
+                    cancelaJogo = true;
+                    Console.WriteLine(e.Message);
+                }
+
+            }
+         
             Console.WriteLine("Resultado: ");
             Console.WriteLine("\n");
             if (cancelaJogo)
