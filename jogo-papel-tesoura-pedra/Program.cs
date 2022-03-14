@@ -50,8 +50,8 @@ namespace jogoPapelTesouraPedra
                     Console.WriteLine("Jogador 1 ganhou!");
                     Console.WriteLine("A Pedra quebra a tesoura do Jogador 2");
                 }
-                
-                if(option2 == 2)
+
+                else if (option2 == 2)
                 {
                     Console.WriteLine("Jogador 2 ganhou");
                     Console.WriteLine("O papel embrulha a pedra");
@@ -69,10 +69,15 @@ namespace jogoPapelTesouraPedra
                     Console.WriteLine("Jogador 1 ganhou!");
                     Console.WriteLine("O papel embrulha a pedra");
                 }
-                else
+                else if (option2 == 3)
                 {
                     Console.WriteLine("Jogador 2 ganhou");
                     Console.WriteLine("A tesoura corta o papel");
+                }
+                else
+                {
+                    Console.WriteLine("Jogador 2 jogou errado!");
+                    Console.WriteLine("Então ninguém ganhou!");
                 }
             }
 
@@ -83,22 +88,31 @@ namespace jogoPapelTesouraPedra
                     Console.WriteLine("Jogador 2 Ganhou!");
                     Console.WriteLine("A pedra quebra a tesoura");
                 }
-                else
+                else if (option2 == 2)
                 {
                     Console.WriteLine("Jogador 1 Ganhou");
                     Console.WriteLine("A tesoura corta o papel");
                 }
+                else
+                {
+                    Console.WriteLine("Jogador 2 jogou errado!");
+                    Console.WriteLine("Então ninguém ganhou!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Jogador 1 jogou errado!");
+                Console.WriteLine("Então ninguém pode ganhar!");
             }
 
         }
         static bool wantToPlayAgain()
         {
             int toWantToPlay;
-            bool toPlay; 
-
-            //Console.Clear();
-
-            Console.WriteLine("Deseja jogar novamente? (1) Continua jogando ou (2) Para sair da Aplicação");
+            bool toPlay;
+            
+            Console.Clear();
+            Console.WriteLine("Deseja jogar novamente? Digite (1) para continua ou qualquer tecla mais a tecla (enter) para sair do Jogo.");
 
             try
             {
@@ -110,12 +124,13 @@ namespace jogoPapelTesouraPedra
                 }
                 else
                 {
+                    Console.WriteLine("Digitou outro valor então saiu da Jogo.");
                     toPlay = false;
                 }
             }
             catch (System.Exception)
             {
-                Console.WriteLine("Digitou errado.");
+                Console.WriteLine("Digitou outro valor então saiu do Jogo.");
                 toPlay = false;
             }
 
@@ -134,24 +149,26 @@ namespace jogoPapelTesouraPedra
                 string object1 = "Vazio";
                 string object2 = "Vazio"; ;
                 bool cancelaJogo = false;
-                
+
 
                 Console.Clear();
                 Console.WriteLine("O jogo começou!");
 
                 try
                 {
-                    Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura ou (9) Para sair do jogo.");
+                    Console.WriteLine("Escolha uma opção para jogar (1) Pedra, (2) Papel ou (3) Tesoura e aperte ou digite (9) Para sair do jogo .");
                     Console.Write("Jogador 1: ");
                     option1 = Convert.ToInt32(Console.ReadLine());
                     object1 = returnsObjectName(Convert.ToInt32(option1));
+
                     if (object1 == "Saiu")
                     {
                         Console.WriteLine("Saiu Jogador 1");
                         cancelaJogo = true;
-                        ToContinue = false;
-                    }
-                    //Console.Clear();
+                        
+                        
+                    }        
+
                 }
                 catch (Exception e)
                 {
@@ -160,10 +177,13 @@ namespace jogoPapelTesouraPedra
                     Console.WriteLine(e.Message);
                 }
 
-                if (!cancelaJogo)
+                
+
+                if (!cancelaJogo )
                 {
                     try
                     {
+                        Console.Clear();
                         Console.WriteLine("Escolha uma opção entre (1) Pedra, (2) Papel ou (3)Tesoura (9) Para sair do jogo.");
                         Console.Write("Jogador 2: ");
 
@@ -172,9 +192,7 @@ namespace jogoPapelTesouraPedra
                         if (object2 == "Saiu")
                         {
                             Console.WriteLine("Saiu Jogador 2");
-                            cancelaJogo = true;
-                            ToContinue = false;
-
+                            cancelaJogo = true;                     
                         }
                         Console.Clear();
                     }
@@ -191,7 +209,7 @@ namespace jogoPapelTesouraPedra
                 Console.WriteLine("\n");
                 if (cancelaJogo)
                 {
-                    Console.WriteLine("Digitou errado ou Você saiu do jogo!");
+                    Console.WriteLine("Você saiu do jogo!");
                     Console.WriteLine("Jorgador 1: " + object1 + ", jogador 2: " + object2);
                 }
                 else
@@ -199,6 +217,8 @@ namespace jogoPapelTesouraPedra
                     showGameResult(option1, option2);
                     Console.WriteLine("Jorgador 1: " + object1 + ", jogador 2: " + object2);
                 }
+
+                Console.WriteLine("Aperte qualquer tecla para continuar...");
                 Console.ReadKey();
 
                 ToContinue = wantToPlayAgain();
